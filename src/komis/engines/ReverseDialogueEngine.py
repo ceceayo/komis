@@ -6,6 +6,14 @@ from komis.BaseEngine import BaseEngine
 class ReverseDialogueEngine(BaseEngine):
     """Same as DialogueEngine, but reversed."""  # TODO: rewrite
 
+    EngineArguments = {
+        "SPEAKER": "",
+        "SPEAKER-STATE": "",
+        "FORMAT": "",
+        "SAYS": "",
+        "FONT-SIZE": "",
+    }
+
     def generate(self, arguments: dict[str, str]) -> Image:
         """
         Generate the image.

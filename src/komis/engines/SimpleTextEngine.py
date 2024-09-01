@@ -6,6 +6,15 @@ from komis.BaseEngine import BaseEngine
 class SimpleTextEngine(BaseEngine):
     """Just put some text on the screen."""
 
+    EngineArguments = {
+        "TEXT": "",
+        "P-X": "",
+        "FONT-SIZE": "",
+        "BOX-WIDTH": "",
+        "BOX-HEIGHT": "",
+        "BOX-LINE-WIDTH": "",
+    }
+
     def generate(self, arguments: dict[str, str]) -> Image:
         """
         Generate the image.

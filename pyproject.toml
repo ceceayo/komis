@@ -104,6 +104,7 @@ ignore = [
     "D107", # Missing docstring in `__init__`
     "D401", # First line of docstring should be in imperative mood
     "S101", # Assert is bad, apparently
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
 ]
 select = [
     "B",   # flake8-bugbear

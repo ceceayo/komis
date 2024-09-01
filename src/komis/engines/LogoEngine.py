@@ -6,6 +6,8 @@ from komis.BaseEngine import BaseEngine
 class LogoEngine(BaseEngine):
     """Draw the logo of the comic."""
 
+    EngineArguments = {}
+
     def generate(self, arguments: dict[str, str]) -> Image:
         """
         Generate the image.

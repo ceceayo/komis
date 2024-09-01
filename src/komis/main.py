@@ -116,6 +116,9 @@ def check(filename: str) -> bool:
                     subtitle=f"Type [bold]{frame['type']}[/]",
                 )
             )
+            assert engines[frame["type"]].verify(
+                frame["args"] if "args" in frame.keys() else {}
+            )
         print(
             Panel(str("\n".join(required_types)), title="Required TYPEs for your file.")
         )
