@@ -1,0 +1,23 @@
+# Changes here will be overwritten by Copier
+_commit: b26d07f
+_src_path: gh:browniebroke/pypackage-template
+add_me_as_contributor: true
+cli_name: komis
+copyright_year: '2024'
+documentation: true
+email: ceayo@duck.com
+full_name: Ceayo
+github_username: ceceayo
+has_cli: true
+initial_commit: true
+is_django_package: false
+open_source_license: GNU General Public License v3
+package_name: komis
+project_name: KomisPLUS
+project_short_description: Procedural comics - change your art style without redrawing
+    everything.
+project_slug: komis
+run_poetry_install: false
+setup_github: false
+setup_pre_commit: false
+

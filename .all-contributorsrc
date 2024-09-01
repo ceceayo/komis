@@ -1,0 +1,27 @@
+{
+  "projectName": "komis",
+  "projectOwner": "ceceayo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 80,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ceceayo",
+      "name": "Ceayo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100067092?v=4",
+      "profile": "https://github.com/ceceayo",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
+}
