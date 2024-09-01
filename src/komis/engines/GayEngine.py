@@ -20,6 +20,10 @@ class GayEngine(BaseEngine):
     (I haven't took the time to actually google the correct colours.)
     """
 
+    EngineArguments = {
+        "FLAG": "",
+    }
+    
     def generate(self, arguments: dict[str, str]) -> Image:
         """
         Generate the image.

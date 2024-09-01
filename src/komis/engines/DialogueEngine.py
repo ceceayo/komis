@@ -5,6 +5,14 @@ from komis.BaseEngine import BaseEngine
 
 class DialogueEngine(BaseEngine):
     """Generate a person and a speech bubble."""
+    
+    EngineArguments = {
+        "SPEAKER": "",
+        "FORMAT": "",
+        "SAYS": "",
+        "FONT-SIZE": "",
+        "SPEAKER-STATE": ""
+    }
 
     def generate(self, arguments: dict[str, str]) -> Image:
         """
