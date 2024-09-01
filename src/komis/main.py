@@ -25,9 +25,6 @@ for frametype in importlib.metadata.entry_points(group="komis.frametype"):
         )
 
 
-print(engines)
-
-
 def read_komis_file(filename: str):
     """Open a file and read it."""
     read_file_data = ""
