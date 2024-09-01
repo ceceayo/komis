@@ -140,6 +140,23 @@ def check(filename: str) -> bool:
 
 def showtime(filename: str, out_dir_name: str):
     """Generate the comic."""
+    fullImage, h, last_part_height, _ = create_the_comic(filename)
+    if os.path.exists(out_dir_name):
+        shutil.rmtree(out_dir_name)
+    os.makedirs(out_dir_name)
+    for i in range(h // PART_HEIGHT):
+        im = Image.new("RGB", (SCREEN_WIDTH, PART_HEIGHT))
+        im.paste(fullImage, (0, PART_HEIGHT * -i))
+        im.save(f"{out_dir_name}/{str(i).zfill(8)}.png")
+    if last_part_height != 0:
+        im = Image.new("RGB", (SCREEN_WIDTH, last_part_height))
+        im.paste(fullImage, (0, PART_HEIGHT * -(h // PART_HEIGHT)))
+        im.save(f"{out_dir_name}/{str(h//PART_HEIGHT).zfill(8)}.png")
+    fullImage.save(f"{out_dir_name}/full.png")
+
+
+def create_the_comic(filename: str):
+    """The actual generation of the comic."""
     images: list[Image.Image] = []
     assert check(filename=filename)
     d = read_komis_file(filename=filename)
@@ -153,24 +170,13 @@ def showtime(filename: str, out_dir_name: str):
     full_height = 0
     for image in images:
         full_height += image.size[1]
-    newImage = Image.new("RGB", (SCREEN_WIDTH, full_height), 0)
+    fullImage = Image.new("RGB", (SCREEN_WIDTH, full_height), 0)
     y = 0
     for image in images:
-        newImage.paste(image, (0, y))
+        fullImage.paste(image, (0, y))
         y += image.size[1]
     # newImage.show()
-    h = newImage.size[1]
+    h = fullImage.size[1]
     last_part_height = h % PART_HEIGHT
     h = h - last_part_height
-    if os.path.exists(out_dir_name):
-        shutil.rmtree(out_dir_name)
-    os.makedirs(out_dir_name)
-    for i in range(h // PART_HEIGHT):
-        im = Image.new("RGB", (SCREEN_WIDTH, PART_HEIGHT))
-        im.paste(newImage, (0, PART_HEIGHT * -i))
-        im.save(f"{out_dir_name}/{str(i).zfill(8)}.png")
-    if last_part_height != 0:
-        im = Image.new("RGB", (SCREEN_WIDTH, last_part_height))
-        im.paste(newImage, (0, PART_HEIGHT * -(h // PART_HEIGHT)))
-        im.save(f"{out_dir_name}/{str(h//PART_HEIGHT).zfill(8)}.png")
-    newImage.save(f"{out_dir_name}/full.png")
+    return fullImage, h, last_part_height, images
