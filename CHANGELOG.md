@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0-rc.3 (2024-09-01)
+
+### Fix
+
+- Make the program less verbose by removing an unneeded print statement ([`696627d`](https://github.com/ceceayo/komis/commit/696627ddaf894217eeba5fb50464a0e66975c8f1))
+
 ## v1.0.0-rc.2 (2024-09-01)
 
 ### Fix
