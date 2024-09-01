@@ -168,9 +168,9 @@ def showtime(filename: str, out_dir_name: str):
     for i in range(h // PART_HEIGHT):
         im = Image.new("RGB", (SCREEN_WIDTH, PART_HEIGHT))
         im.paste(newImage, (0, PART_HEIGHT * -i))
-        im.save(f"{out_dir_name}/{i}.png")
+        im.save(f"{out_dir_name}/{str(i).zfill(8)}.png")
     if last_part_height != 0:
         im = Image.new("RGB", (SCREEN_WIDTH, last_part_height))
         im.paste(newImage, (0, PART_HEIGHT * -(h // PART_HEIGHT)))
-        im.save(f"{out_dir_name}/{h//PART_HEIGHT}.png")
+        im.save(f"{out_dir_name}/{str(h//PART_HEIGHT).zfill(8)}.png")
     newImage.save(f"{out_dir_name}/full.png")
