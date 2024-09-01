@@ -23,7 +23,7 @@ class GayEngine(BaseEngine):
     EngineArguments = {
         "FLAG": "",
     }
-    
+
     def generate(self, arguments: dict[str, str]) -> Image:
         """
         Generate the image.
