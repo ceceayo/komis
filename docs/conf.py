@@ -7,7 +7,7 @@
 project = "KomisPLUS"
 copyright = "2024, Ceayo"
 author = "Ceayo"
-release = "1.0.0-rc.1"
+release = "1.0.0-rc.2"
 
 # General configuration
 extensions = [

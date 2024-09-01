@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "komis"
-version = "1.0.0-rc.1"
+version = "1.0.0-rc.2"
 description = "Procedural comics - change your art style without redrawing everything."
 authors = ["Ceayo <ceayo@duck.com>"]
 license = "GNU General Public License v3"
