@@ -5,6 +5,17 @@ from komis.BaseEngine import BaseEngine
 
 class SimpleTextEngine(BaseEngine):
     """Just put some text on the screen."""
+    
+    
+    EngineArguments = {
+        "TEXT": "",
+        "P-X": "",
+        "FONT-SIZE": "",
+        "BOX-WIDTH": "",
+        "BOX-HEIGHT": "",
+        "BOX-LINE-WIDTH": "",
+    }
+    
 
     EngineArguments = {
         "TEXT": "",
@@ -57,3 +68,7 @@ class SimpleTextEngine(BaseEngine):
                 else 1,
             )
         return newimage
+
+    
+    def verify(self, arguments: dict[str, str]) -> bool:
+        return super().verify(arguments)
