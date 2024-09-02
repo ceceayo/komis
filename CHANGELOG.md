@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0 (2024-09-02)
+
+### Fix
+
+- Releasing works on master branch ([`b7f2aee`](https://github.com/ceceayo/komis/commit/b7f2aee163a86b607212af4242f16daa5a5f1924))
+
 ## v1.0.0-rc.3 (2024-09-01)
 
 ### Fix
