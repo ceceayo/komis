@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.1.0 (2024-09-02)
+
+### Feature
+
+- Merge pull request #4 from ceceayo/feat/testing ([`43943de`](https://github.com/ceceayo/komis/commit/43943de369eeeeac60bb2d25e55e27de1732ec12))
+- Some basic unit tests to verify the program works ([`5e4e8b1`](https://github.com/ceceayo/komis/commit/5e4e8b14368813237c8725b73d28db4b318a580a))
+
 ## v1.0.0 (2024-09-02)
 
 ### Fix
