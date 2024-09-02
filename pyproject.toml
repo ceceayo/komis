@@ -63,11 +63,11 @@ exclude_commit_patterns = [
 [tool.semantic_release.changelog.environment]
 keep_trailing_newline = true
 
-[tool.semantic_release.branches.main]
-match = "main"
+[tool.semantic_release.branches.master]
+match = "master"
 
 [tool.semantic_release.branches.noop]
-match = "(?!main$)"
+match = "(?!master$)"
 prerelease = true
 
 [tool.pytest.ini_options]
